@@ -1,0 +1,27 @@
+{
+  "name": "mytsbowercofig",
+  "description": "mytsdemo1",
+  "main": "index.js",
+  "authors": [
+    "learning typescript's author"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "typescript",
+    "demo"
+  ],
+  "homepage": "https://github.com/qinxiaowen/Typescript-Samples",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1"
+  },
+  "devDependencies": {
+    "jasmine-core": "jasmine#^2.8.0"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "typescriptdemo1",
+  "version": "1.0.0",
+  "description": "mytsdemo1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qinxiaowen/Typescript-Samples.git"
+  },
+  "keywords": [
+    "typescript",
+    "demo"
+  ],
+  "author": "learning typescript's author",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/qinxiaowen/Typescript-Samples/issues"
+  },
+  "homepage": "https://github.com/qinxiaowen/Typescript-Samples#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-tslint": "^8.1.2",
+    "gulp-typescript": "^3.2.2"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}
