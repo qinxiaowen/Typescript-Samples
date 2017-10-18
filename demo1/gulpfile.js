@@ -36,3 +36,27 @@ gulp.task('tsc-tests', function() {
  .pipe(ts(tsTestProject ))
  .js.pipe(gulp.dest('./temp/test/'));
 });
+
+var browserify = require('browserify'),
+ transform = require('vinyl-transform'),
+ uglify = require('gulp-uglify'),
+ sourcemaps = require('gulp-sourcemaps');
+var browserified = transform(function(filename) {
+ var b = browserify({ entries: filename, debug: true });
+ return b.bundle();
+});
+
+gulp.task('bundle-js', function () {
+ return gulp.src('./temp/source/js/main.js')
+ .pipe(browserified)
+ .pipe(sourcemaps.init({ loadMaps: true }))
+ .pipe(uglify())
+ .pipe(sourcemaps.write('./'))
+ .pipe(gulp.dest('./dist/source/js/'));
+});
+
+gulp.task('bundle-test', function () {
+ return gulp.src('./temp/test/**/**.test.js')
+ .pipe(browserified)
+ .pipe(gulp.dest('./dist/test/'));
+});
